@@ -34,14 +34,16 @@ ul {
 }
 
 .container {
-  max-width: 1440px;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
+  max-width: 1158px;
+  margin: auto;
+  padding: 0 15px;
 }
 
 /* Header */
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
 
 .nav-conteiner {
   display: flex;
@@ -53,8 +55,6 @@ ul {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  gap: 76px;
-  padding-left: 157px;
 }
 
 .nav-list {
@@ -65,7 +65,6 @@ ul {
 .nav-address {
   display: flex;
   gap: 40px;
-  padding-right: 157px;
 }
 
 .logo {
@@ -76,6 +75,7 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .logo-web {
@@ -122,10 +122,15 @@ ul {
 
 .hero-section {
   background-color: #2e2f42;
-  width: 1440px;
-  height: 600px;
+  padding: 188px 0;
   flex-shrink: 0;
-  text-align: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-section-title {
@@ -135,7 +140,8 @@ ul {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 1.12px;
-  padding: 188px 472px 48px;
+  max-width: 496px;
+  text-align: center;
 }
 
 h2 {
@@ -160,6 +166,9 @@ h2 {
   border-radius: 4px;
   cursor: pointer;
   padding: 16px 32px;
+  display: block;
+  margin-top: 48px;
+  min-width: 169px;
 }
 
 .button-hero:hover {
@@ -172,15 +181,10 @@ h2 {
 
 /* Feature section */
 
-.feature-container {
-  display: flex;
-}
-
 .feature-list {
   display: flex;
   gap: 24px;
   flex-grow: 1;
-  justify-content: center;
 }
 
 .feature-list-inner {
@@ -189,19 +193,11 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  width: calc((100% - 72px) / 4);
 }
 
 .hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  visibility: hidden;
 }
 
 .feature-title {
@@ -232,6 +228,7 @@ h2 {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
+  text-align: center;
 }
 
 .card-text {
@@ -240,6 +237,7 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  text-align: center;
 }
 
 /* Team section */
@@ -253,13 +251,12 @@ h2 {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   text-align: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .team-section-inner {
   display: flex;
   gap: 24px;
-  justify-content: center;
 }
 
 .team-section-list {
@@ -273,7 +270,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  margin-bottom: 8px;
+  width: calc((100% - 72px) / 4);
 }
 
 .team-section-list-box {
@@ -283,7 +281,7 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding-bottom: 32px;
+  padding: 32px 0;
 }
 
 /* Portfolio */
@@ -297,14 +295,14 @@ h2 {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   text-align: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  max-width: calc(100% - 50px) / 3;
+  row-gap: 48px;
   justify-content: center;
 }
 
@@ -317,13 +315,13 @@ h2 {
   padding-bottom: 0px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
   flex-shrink: 0;
+  width: calc((100% - 48px) / 3);
 }
 
 .prtf-list-in-box {
   display: flex;
-  padding: 0px 16px;
+  padding: 32px 16px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -339,7 +337,7 @@ h2 {
   line-height: 1.2;
   letter-spacing: 0.4px;
   padding-left: 16px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .portfolio-card-text {
@@ -357,15 +355,8 @@ h2 {
 
 .footer {
   background: #2e2f42;
-  width: 1440px;
   height: 312px;
-  box-sizing: content-box;
-}
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
+  padding: 100px 0;
 }
 
 .logo-footer {
@@ -376,8 +367,9 @@ h2 {
   line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
-  padding-top: 101px;
   padding-left: 156px;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .logo-web-footer {
@@ -390,6 +382,6 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
-  padding-left: 156px;
-  max-width: 418px;
+  margin-left: 156px;
+  max-width: 264px;
 }
