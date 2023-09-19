@@ -196,8 +196,18 @@ h2 {
   width: calc((100% - 72px) / 4);
 }
 
-.hidden {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .feature-title {
@@ -207,6 +217,7 @@ h2 {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
+  margin-bottom: 8px;
 }
 
 .feature-text {
@@ -229,6 +240,7 @@ h2 {
   line-height: 1.2;
   letter-spacing: 0.4px;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .card-text {
@@ -307,7 +319,6 @@ h2 {
 }
 
 .portfolio-list-inner {
-  border: 1px solid #e7e9fc;
   background: #fff;
   display: flex;
   width: 360px;
@@ -327,6 +338,7 @@ h2 {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+  border: 1px solid #e7e9fc;
 }
 
 .portfolio-card-title {
@@ -348,7 +360,6 @@ h2 {
   letter-spacing: 0.32px;
   padding-top: none;
   padding-left: 16px;
-  padding-bottom: 32px;
 }
 
 /* footer */
